@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header class="header" id="home">
+        <button class="header__button" id="burger-btn">
+            <img src="images/burger-menu.png" class="burger" alt="burger-button-img">
+        </button>
+        <button class="header__button" id="anti-burger-btn">
+            <img src="images/anti-burger.png" class="anti-burger" alt="anti-burger-button-img">
+        </button>
+        <a href="#home" class="logo">
+            <img src="images/thehardkiss.png" class="logo" alt="logo-the-hardkiss">
+        </a>
+        <nav class="nav">
+            <ul class="nav__line">
+                <li class="nav__item">
+                    <a href="#concert" class="nav__link">КОНЦЕРТЫ</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#merch" class="nav__link">МЕРЧ</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#music" class="nav__link">АЛЬБОМЫ</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#question" class="nav__link">ВОПРОСЫ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="section-one">
+        <img src="images/band.png" class="photo-band" alt="band-first-section">
+        <button id="open-modal" class="button-about"><p>О НАС</p></button>
+    </div>
+    <div class="modal" id="modal-box">
+        <div class="modal__window">
+            <button id="close-modal" class="modal-close">
+                <img src="images/krestik.png" alt="button-close" class="button-krestik">
+            </button>
+            <h2>Приветствуем!</h2>
+            <p>Мы The Hardkiss — украинская рок-группа, появившаяся в 2011 году. <br> Авторство всех песен группы принадлежит Юлии Саниной (главной вокалистке) и Валерию Бебко (креативному продюссеру).</p>
+        </div>
+    </div>
+
+    <h1 id="concert">КОНЦЕРТЫ</h1>
+    <div class="tabs">
+        <div class="tabs__nav">
+            <button class="tabs__nav__button active" type="button" data-tab="#tab1">УКРАИНА</button>
+            <button class="tabs__nav__button" type="button" data-tab="#tab2">МИР</button>
+        </div>
+        <div class="tabs__content">
+            <div class="tabs__content__el active" id="tab1">
+                <span class="date">02.06 </span><span class="town">Житомир – Драмтеатр</span> <br><br>
+                <span class="date">07.06 </span><span class="town">Киев – МЦКИ</span> <br><br>
+                <span class="date">13.06 </span><span class="town">Черновцы – Драмтеатр</span> <br><br>
+                <span class="date">14.06 </span><span class="town">Хмельницкий – Драмтеатр</span>
+            </div>
+            <div class="tabs__content__el" id="tab2">
+                <span class="date">02.10 </span><span class="town">Vancouver – Vogue Theatre</span> <br><br>
+                <span class="date">06.10 </span><span class="town">Los Angeles – Whisky a Go Go</span> <br><br>
+                <span class="date">13.10 </span><span class="town">New York – Melrose Ballroom</span> <br><br>
+                <span class="date">18.10 </span><span class="town">Toronto – The Opera House</span>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="merch">МЕРЧ</h1>
+    <div class="filter">
+        <div class="filter__nav">
+            <button class="filter__nav__button" type="button" data-fil="#fil1">ПЛАСТИНКИ</button>
+            <button class="filter__nav__button active" type="button" data-fil="#fil2">ОДЕЖДА</button>
+            <button class="filter__nav__button" type="button" data-fil="#fil3">КАНЦЕЛЯРИЯ</button>
+        </div>
+        <div class="filter__content">
+            <div class="filter__content__el" id="fil1">
+                <div class="tovar"><img src="images/alb1.png" alt="img-alb1"><p>Пластинка<br>1400</p></div>
+                <div class="tovar"><img src="images/alb2.png" alt="img-alb2"><p>Пластинка<br>1400</p></div>
+                <div class="tovar"><img src="images/alb3.png" alt="img-alb3"><p>Пластинки<br>3250</p></div>
+                <div class="tovar"><img src="images/alb4.png" alt="img-alb4"><p>Пластинка<br>2700</p></div>
+            </div>
+            <div class="filter__content__el active" id="fil2">
+                <div class="tovar"><img src="images/shirt1.png" alt="img-cloth1"><p>Футболка<br>2000</p></div>
+                <div class="tovar"><img src="images/shirt2.png" alt="img-cloth2"><p>Футболка<br>2000</p></div>
+                <div class="tovar"><img src="images/shoper.png" alt="img-cloth3"><p>Шоппер<br>800</p></div>
+                <div class="tovar"><img src="images/socks.png" alt="img-cloth4"><p>Носки<br>200</p></div>
+            </div>
+            <div class="filter__content__el" id="fil3">
+                <div class="tovar"><img src="images/note1.png" alt="img-book1"><p>Блокнот<br>600</p></div>
+                <div class="tovar"><img src="images/note2.png" alt="img-book2"><p>Блокнот<br>600</p></div>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="music">АЛЬБОМЫ</h1>
+    <div class="slider">
+        <button class="slider__button" onclick="prev()">&lt;</button>
+        <div class="img-box">
+            <img src="images/cover1.png" class="slider-img">
+        </div>
+        <button class="slider__button" onclick="next()">&gt;</button>
+    </div>
+
+    <h1 id="question">ВОПРОСЫ</h1>
+    <div class="container">
+        <div class="box">
+          <div class="question">Когда приедете в Россию?</div>
+          <div class="answer">
+            <p>
+              Никогда!&#40;&#40;&#40;&#40;&#40;
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="question">Будет дуэт с Тиной?</div>
+          <div class="answer">
+            <p>
+              Пока не знаем... Надеемся, будет
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="question">Скоро ли новые песни?</div>
+          <div class="answer">
+            <p>
+              Ждите летом
+            </p>
+          </div>
+        </div>
+      </div>
+    
+
+    <script src="script.js"></script>
+
+</body>
+</html>
